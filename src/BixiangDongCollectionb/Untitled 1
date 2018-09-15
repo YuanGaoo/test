@@ -1,0 +1,69 @@
+why collection ?
+	the object use to encapsulate data, if have more object need stored
+	not sure how many object , stored by collection
+
+collection feature 
+	1:is the container use to store object
+	2:collection's length is relaxable
+	3:collection can not store primitive type 
+
+
+Collection  methods
+
+1 add
+	boolean add(Object obj); -->add one by one ； if successfully add , return true, if not false
+	boolean addAll(Collection coll);-->all all toghter by once
+
+2 delete
+	boolean remove(Object obj); ----> successfully delete , return true
+	boolean removeAll(Collection coll)
+3  boolean
+	boolean contains(Object obj);
+	boolean containsAll(Collection coll);
+	boolean isEmpty();is have Elements in collection;
+	
+4 get elements:
+	int size();---> get length
+	Iterator 	iterator();----> use to get collections's elements method; 
+
+5 others
+	boolean retainAll(Collection coll):
+	Object[]  toArray();convert to array
+	
+-----------------------------
+Collection
+	|--List: sequence (the sequence of store and take out same ) . elements has index, element can be repetition 
+	|--Set:	element can not be repetition .not by sequence ,random sequence
+	
+List :  property  method
+	1: add elements
+		void add(index,element);
+		void add(index,collection)
+		
+	2:delete 
+		OBJECT REMOVE(index)
+	
+	3:modification 
+		 object set(index,element);
+	
+	4:get 
+		object get(index);
+		int indexOf(object);
+		int lastIndexOf(objecg);
+		List subList(from,to);
+		
+List collection can complete elements's add delete modifier read
+	
+List:
+	|--Vector:  from Java 1.0 内部是数据结构，是同步的
+	|--ArrayList:from java 1.2, 内部是数组结构，是不同步的，替代了vector/ 查询速度快
+	|--LinkedList:内部是链表数据结构，是不同步的，增删元素的速度特别快； // add delete speed fast
+	
+		
+	
+	
+	
+	
+	
+	
+	
