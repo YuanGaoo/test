@@ -9,7 +9,7 @@ public class TryDo {
 		b=b.substring(0,b.length()-a.length());
 		System.out.println(b);
 		
-		
+		 System.out.println("change");
 		System.out.println(revers("hellpo"));
 	}
 	
@@ -22,6 +22,7 @@ public class TryDo {
 		 temp+=revers(word.substring(1))+word.charAt(0);
 		 System.out.println(temp);
 		   return temp;
+		  
 		   
 		   
 	}
