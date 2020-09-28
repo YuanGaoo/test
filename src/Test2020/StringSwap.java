@@ -1,22 +1,38 @@
 package Test2020;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class StringSwap {
 
 	public static void main(String[] args) {
-		String a = "Helloaa";
-		String b= "word is besta";
+		int [] arr = {1,2,3,4,5,6}; // expected output 2,4,6,1,3,5
 		
-		System.out.println("Before swaping::");
-		System.out.println("The value a::"+a);
-		System.out.println("The value b::"+b);
+		System.out.println(Arrays.toString(returnEvenOdd(arr)));
 		
-		
-		System.out.println("---------------after---------");
-		a = a+b;
-		b = a.substring(0,a.length()-b.length());
-		a= a.substring(b.length());
-		System.out.println("a :::::"+a);
-		System.out.println("b::::::"+b);
 	}
-
+	
+	public static int[] returnEvenOdd(int [] arr) {
+		int a = 0, b = arr.length - 1;
+		
+		
+		while(a < b) {
+			 while(arr[a] %2 == 0 && a < b) {
+				 a ++;
+			 }
+			 while(arr[b]% 2 == 1 && a < b) {
+				 b --;
+			 }
+			 if(a < b) {
+				 int temp = arr[a];
+				 arr[a] = arr[b];
+				 arr[b] = temp;
+				 a ++;
+				 b --;
+			 }
+		}
+		return arr;
+	}
+		
 }
